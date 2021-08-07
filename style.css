@@ -1,0 +1,58 @@
+.picture{
+	width: 300px;
+	height: 500px;
+	margin:  100px auto;
+	
+	position: relative;
+}
+.picture img
+{
+width: 100%;
+height: 100%;
+
+transition: .4s;
+}
+.picture:hover img
+{
+  opacity: .4;
+  cursor: pointer;
+}
+.picture .title
+{
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	cursor: pointer;
+
+}
+/*le titre*/
+.picture .title h2
+{
+
+background-color: #6EBB2F;
+color: white;
+padding: 10px 15px;
+margin:  0;
+font-family: tahoma;
+z-index: 1;
+position: relative;
+}
+/* la creation dyal wahd div virtuel pour l'encadrement */
+.picture .title:after
+{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -10px;
+	height: calc(100% + 20px);
+	width:0;
+	z-index: 0;
+	background-color: #EAC87D;
+	transition: .4s;
+}
+/* l'encadrement dyal titre */
+.picture:hover .title:after
+{
+	width: calc(100% + 10px);
+}
+
